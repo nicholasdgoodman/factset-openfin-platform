@@ -1,0 +1,142 @@
+{
+    "runtime": {
+        "version": "stable"
+    },
+    "platform": {
+        "uuid": "app-1602950954509-5689",
+        "autoShow": false,
+        "defaultWindowOptions": {
+            "contextMenu": true,
+            "url": "http://localhost:8080/platform/tab-window",
+            "defaultWidth": 800,
+            "defaultHeight": 600
+        },
+        "defaultViewOptions": {
+            "preloadScripts": [
+                { "url": "https://cdn.openfin.co/services/openfin/fdc3/0.2.2/openfin-fdc3.js" }
+            ]
+        }
+    },
+    "startup_app": {
+        "name": "FactSet"
+    },
+    "services": [
+        { "name": "fdc3" }
+    ],
+    "snapshot": {
+        "windows": [
+            {
+                "name": "main-window",
+                "url": "http://localhost:8080/platform/main-window",
+                "showBackgroundImages": true,
+                "saveWindowState": false,
+                "backgroundThrottling": true,
+                "frame": false,
+                "defaultWidth": 700,
+                "defaultHeight": 400,
+                "defaultCentered": true,
+                "layout": {
+                    "settings": {
+                        "hasHeaders": false,
+                        "reorderEnabled": false
+                    },                    
+                    "content": [
+                        {
+                            "type": "stack",
+                            "id": "no-drop-target",
+                            "content": [
+                                {
+                                    "type": "component",
+                                    "componentName": "view",
+                                    "componentState": {
+                                        "name": "main-view",
+                                        "url": "https://login.uat.factset.com/"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "url": "http://localhost:8080/platform/temp-demo",
+                "defaultWidth": 350,
+                "defaultHeight": 200,
+                "defaultTop": 20,
+                "defaultLeft": 20
+            }
+        ],
+        "_": [
+            {
+                "url": "http://localhost:8080/platform/group-window",
+                "showBackgroundImages": true,
+                "saveWindowState": false,
+                "backgroundThrottling": true,
+                "frame": false,
+                "layout": {
+                    "settings": {
+                        "hasHeaders": true,
+                        "reorderEnabled": true
+                    },                    
+                    "content": [
+                        {
+                            "type": "column",
+                            "id": "no-drop-target",
+                            "content": [
+                                {
+                                    "type": "component",
+                                    "componentName": "view",
+                                    "componentState": {
+                                        "url": "https://login.uat.factset.com/"
+                                    }
+                                },
+                                {
+                                    "type": "component",
+                                    "componentName": "view",
+                                    "componentState": {
+                                        "url": "https://login.uat.factset.com/"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "url": "http://localhost:8080/platform/tab-window",
+                "showBackgroundImages": true,
+                "saveWindowState": false,
+                "backgroundThrottling": true,
+                "frame": false,
+                "layout": {
+                    "settings": {
+                        "hasHeaders": true,
+                        "reorderEnabled": true
+                    },                    
+                    "content": [
+                        {
+                            "type": "column",
+                            "id": "no-drop-target",
+                            "content": [
+                                {
+                                    "type": "component",
+                                    "componentName": "view",
+                                    "componentState": {
+                                        "url": "https://login.uat.factset.com/"
+                                    }
+                                },
+                                {
+                                    "type": "component",
+                                    "componentName": "view",
+                                    "componentState": {
+                                        "url": "https://login.uat.factset.com/"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
